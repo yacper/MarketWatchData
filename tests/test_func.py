@@ -6,8 +6,8 @@ Desc: To test intention, just write test code here!
 """
 import sys
 
-sys.path.append("../marketwatchdata")
-# print(sys.path)
+sys.path.insert(0, "../marketwatchdata")
+#print(sys.path)
 
 # from marketwatchdata.MarketWatch import *
 import marketwatchdata.MarketWatch as mw
