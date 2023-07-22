@@ -3,7 +3,7 @@ Created Date: Friday, July 21st 2023, 8:14:59 pm
 Author: yacper
 
 '''
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 __author__="yacper"
 __authoremail__="yacper@gmail.com"
 
