@@ -4,8 +4,13 @@
 Date: 2023/7/21 18:16
 Desc: To test intention, just write test code here!
 """
-# from marketwatchdata.MarketWatch import ohlc
-from marketwatchdata.MarketWatch import ohlc
+import sys
+
+sys.path.append("../marketwatchdata")
+# print(sys.path)
+
+# from marketwatchdata.MarketWatch import *
+import marketwatchdata.MarketWatch as mw
 
 
 def test_ohlc():
@@ -14,7 +19,8 @@ def test_ohlc():
     :return: assert result
     :rtype: assert
     """
-    df = ohlc('TMUBMUSD03M', 'P1D', 'P1Y')
+    df = mw.ohlc('TMUBMUSD03M', 'P1D', 'P1Y')
+    print(df)
     assert df.shape[0] > 0
 
 
