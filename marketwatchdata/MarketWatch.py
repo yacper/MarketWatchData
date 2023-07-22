@@ -4,6 +4,9 @@ import requests
 import json
 
 
+
+
+
 def ohlc(code: str, timeframe: str, timerange: str):
     """获取日线数据 marketWatch只支持日线级别的
 
