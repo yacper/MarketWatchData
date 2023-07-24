@@ -18,10 +18,4 @@ mkdocs:
 # https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
 python:
   install:
-  - method: pip
-      extra_requirements:
-        - mkdocs
-        - mkdocs-autorefs
-        - mkdocstrings[python]
-        - mkdocstrings-python
-        - mkdocs-material
+    - requirements: docs/requirements.txt
