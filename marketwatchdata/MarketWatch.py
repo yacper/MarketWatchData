@@ -4,22 +4,16 @@ import requests
 import json
 
 
+def ohlc(code: str, timeframe: str, timerange: str) -> pd.DataFrame:
+    """retrieve ohlc data
 
+        import marketwatchdata as mw
 
+        df = mw.ohlc('STOCK/US/XNAS/AAPL', 'P1D', 'P1Y')
+        print(df)
 
-def ohlc(code: str, timeframe: str, timerange: str):
-    """获取日线数据 marketWatch只支持日线级别的
-
-    参数:
-        code: STOCK/US/XNAS/AAPL | TMUBMUSD10Y
-        timeframe: P1D | P1W
-        timerange: P1M P1Y P2Y All
-
-    返回:
-        pandas.dataframe
-
-                    open      high      low   close      volume
-        time
+                       open      high      low   close      volume
+        date
         2022-07-21  154.500  155.5700  151.940  155.35  65086641.0
         2022-07-22  155.390  156.2800  153.410  154.09  66675406.0
         2022-07-25  154.010  155.0400  152.280  152.95  53623953.0
@@ -32,13 +26,14 @@ def ohlc(code: str, timeframe: str, timerange: str):
         2023-07-19  193.100  198.2300  192.650  195.10  80507320.0
         2023-07-20  195.090  196.4700  192.495  193.13  59581196.0
 
-    抛出:
+    Args:
+        code (str): code of an instrument, eg: STOCK/US/XNAS/AAPL | TMUBMUSD10Y
+        timeframe (str): P1D | P1W
+        timerange (str): P1M P1Y P2Y All
 
-    示例:
-        df = MW_GetOHLC('STOCK/US/XNAS/AAPL', 'P1D', 'P1Y')
-
+    Returns:
+        pandas.dataframe
     """
-
     req_url = (
         f'https://api-secure.wsj.net/api/michelangelo/timeseries/history?json={{"Step":"{timeframe}","TimeFrame":"{timerange}", '
         '"EntitlementToken":"cecc4267a0194af89ca343805a3e57af","IncludeMockTick":true,"FilterNullSlots":false,'
@@ -74,12 +69,12 @@ def ohlc(code: str, timeframe: str, timerange: str):
 
     # temp_df = pd.DataFrame(data, columns=['REPORT_DATE','PUBLISH_DATE', 'VALUE', 'PRE_VALUE'])
     temp_df = pd.DataFrame(data)
-    temp_df['time'] = times
-    temp_df.columns = ["open", "high", "low", "close", 'volume', 'time']
+    temp_df['date'] = times
+    temp_df.columns = ["open", "high", "low", "close", 'volume', 'date']
 
-    temp_df["time"] = pd.to_datetime(temp_df["time"], unit='ms').dt.date
+    temp_df["date"] = pd.to_datetime(temp_df["date"], unit='ms').dt.date
     # temp_df["time"] = pd.to_datetime(temp_df["time"],unit='ms')
-    temp_df.set_index("time", inplace=True)
+    temp_df.set_index("date", inplace=True)
     # print(temp_df.dtypes)
     temp_df.dropna(inplace=True)
 

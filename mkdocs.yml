@@ -1,4 +1,13 @@
 site_name: MarketWatchData Docs
+theme: material
 nav:
   - home: index.md  
-  - test: test.md
+  - marketwatchdata: marketwatchdata.md
+
+plugins:
+  - mkdocstrings: 
+      watch:
+        - marketwatchdata
+  - search:
+watch:
+  - .  # reload docs for any file changes
