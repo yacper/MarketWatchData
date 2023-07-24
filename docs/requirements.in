@@ -1,3 +1,4 @@
+# requirements for readthedocs
 mkdocs
 mkdocs-autorefs
 mkdocstrings[python]
