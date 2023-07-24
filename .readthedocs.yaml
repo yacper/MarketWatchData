@@ -20,8 +20,8 @@ python:
   install:
   - method: pip
       extra_requirements:
-      - mkdocs
-      - mkdocs-autorefs
-      - mkdocstrings[python]
-      - mkdocstrings-python
-      - mkdocs-material
+        - mkdocs
+        - mkdocs-autorefs
+        - mkdocstrings[python]
+        - mkdocstrings-python
+        - mkdocs-material
