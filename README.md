@@ -5,7 +5,8 @@
 [![Downloads](https://pepy.tech/badge/marketwatchdata)](https://pepy.tech/project/marketwatchdata)
 [![Documentation Status](https://readthedocs.org/projects/MarketWatchData/badge/?version=latest)](https://MarketWatchData.readthedocs.io/?badge=latest)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Actions Status](https://github.com/yacper/MarketWatchData/workflows/build/badge.svg)](https://github.com/yacper/MarketWatchData/actions)
+[![Actions Status](https://github.com/yacper/MarketWatchData/actions/workflows/check.yml/badge.svg)](https://github.com/yacper/MarketWatchData/actions)
+[![Deploy Status](https://github.com/yacper/MarketWatchData/actions/workflows/release_and_deploy.yml/badge.svg)](https://github.com/yacper/MarketWatchData/actions)
 [![MIT Licence](https://camo.githubusercontent.com/14a9abb7e83098f2949f26d2190e04fb1bd52c06/68747470733a2f2f626c61636b2e72656164746865646f63732e696f2f656e2f737461626c652f5f7374617469632f6c6963656e73652e737667)](https://github.com/akfamily/akshare/blob/master/LICENSE)
 
 ## Overview
@@ -52,19 +53,21 @@ print(df)
 Output
 
 ```
-      日期          开盘   收盘    最高  ...  振幅   涨跌幅 涨跌额 换手率
-0     2017-03-01   9.49   9.49   9.55  ...  0.84  0.11  0.01  0.21
-1     2017-03-02   9.51   9.43   9.54  ...  1.26 -0.63 -0.06  0.24
-2     2017-03-03   9.41   9.40   9.43  ...  0.74 -0.32 -0.03  0.20
-3     2017-03-06   9.40   9.45   9.46  ...  0.74  0.53  0.05  0.24
-4     2017-03-07   9.44   9.45   9.46  ...  0.63  0.00  0.00  0.17
-          ...    ...    ...    ...  ...   ...   ...   ...   ...
-1100  2021-09-01  17.48  17.88  17.92  ...  5.11  0.45  0.08  1.19
-1101  2021-09-02  18.00  18.40  18.78  ...  5.48  2.91  0.52  1.25
-1102  2021-09-03  18.50  18.04  18.50  ...  4.35 -1.96 -0.36  0.72
-1103  2021-09-06  17.93  18.45  18.60  ...  4.55  2.27  0.41  0.78
-1104  2021-09-07  18.60  19.24  19.56  ...  6.56  4.28  0.79  0.84
-[1105 rows x 11 columns]
+                open     high      low   close       volume
+date
+2022-07-25  154.010  155.040  152.280  152.95   53623953.0
+2022-07-26  152.265  153.085  150.800  151.60   55138688.0
+2022-07-27  152.580  157.330  152.160  156.79   78620688.0
+2022-07-28  156.980  157.640  154.410  157.35   81378727.0
+2022-07-29  161.240  163.630  159.500  162.51  101786898.0
+...             ...      ...      ...     ...          ...
+2023-07-17  191.900  194.320  191.810  193.99   50520160.0
+2023-07-18  193.350  194.330  192.415  193.73   48353770.0
+2023-07-19  193.100  198.230  192.650  195.10   80507320.0
+2023-07-20  195.090  196.470  192.495  193.13   59581199.0
+2023-07-21  194.100  194.970  191.230  191.94   71951683.0
+
+[250 rows x 5 columns]
 ```
 
 ### Plot
@@ -81,7 +84,7 @@ mpf.plot(df, type='candle', mav=(3, 6, 9), volume=True, show_nontrading=False)
 
 Output
 
-![](https://jfds-1252952517.cos.ap-chengdu.myqcloud.com/akshare/readme/home/AAPL_candle.png)
+![](https://user-images.githubusercontent.com/668255/255549764-1665d2e5-f50d-462d-a4a6-ed04e7f7517a.png)
 
 ## Acknowledgement
 
