@@ -7,7 +7,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Actions Status](https://github.com/yacper/MarketWatchData/actions/workflows/check.yml/badge.svg)](https://github.com/yacper/MarketWatchData/actions)
 [![Deploy Status](https://github.com/yacper/MarketWatchData/actions/workflows/release_and_deploy.yml/badge.svg)](https://github.com/yacper/MarketWatchData/actions)
-[![MIT Licence](https://camo.githubusercontent.com/14a9abb7e83098f2949f26d2190e04fb1bd52c06/68747470733a2f2f626c61636b2e72656164746865646f63732e696f2f656e2f737461626c652f5f7374617469632f6c6963656e73652e737667)](https://github.com/akfamily/akshare/blob/master/LICENSE)
+[![MIT Licence](https://camo.githubusercontent.com/14a9abb7e83098f2949f26d2190e04fb1bd52c06/68747470733a2f2f626c61636b2e72656164746865646f63732e696f2f656e2f737461626c652f5f7374617469632f6c6963656e73652e737667)](https://github.com/yacper/MarketWatchData/blob/main/LICENSE)
 
 ## Overview
 
