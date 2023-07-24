@@ -1,35 +1,34 @@
-# MarketWatchData
+# marketwatchdata
 
 
-[![PyPI](https://img.shields.io/pypi/v/marketwatchdata.svg)](https://pypi.org/project/marketwatchdata/)
-[![Downloads](https://pepy.tech/badge/marketwatchdata)](https://pepy.tech/project/marketwatchdata)
-[![Documentation Status](https://readthedocs.org/projects/MarketWatchData/badge/?version=latest)](https://MarketWatchData.readthedocs.io/?badge=latest)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Actions Status](https://github.com/yacper/MarketWatchData/actions/workflows/check.yml/badge.svg)](https://github.com/yacper/MarketWatchData/actions)
-[![Deploy Status](https://github.com/yacper/MarketWatchData/actions/workflows/release_and_deploy.yml/badge.svg)](https://github.com/yacper/MarketWatchData/actions)
-[![MIT Licence](https://camo.githubusercontent.com/14a9abb7e83098f2949f26d2190e04fb1bd52c06/68747470733a2f2f626c61636b2e72656164746865646f63732e696f2f656e2f737461626c652f5f7374617469632f6c6963656e73652e737667)](https://github.com/yacper/MarketWatchData/blob/main/LICENSE)
+[![pypi](https://img.shields.io/pypi/v/marketwatchdata.svg)](https://pypi.org/project/marketwatchdata/)
+[![downloads](https://pepy.tech/badge/marketwatchdata)](https://pepy.tech/project/marketwatchdata)
+[![documentation status](https://readthedocs.org/projects/marketwatchdata/badge/?version=latest)](https://marketwatchdata.readthedocs.io/en/latest/?badge=latest)
+[![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![actions status](https://github.com/yacper/marketwatchdata/actions/workflows/check.yml/badge.svg)](https://github.com/yacper/marketwatchdata/actions)
+[![mit licence](https://camo.githubusercontent.com/14a9abb7e83098f2949f26d2190e04fb1bd52c06/68747470733a2f2f626c61636b2e72656164746865646f63732e696f2f656e2f737461626c652f5f7374617469632f6c6963656e73652e737667)](https://github.com/yacper/marketwatchdata/blob/main/license)
 
-## Overview
+## overview
 
-[MarketWathData](https://github.com/yacper/marketwatchdata) retrieve datas from marketwatch.com.
+[marketwathdata](https://github.com/yacper/marketwatchdata) retrieve datas from marketwatch.com.
 
-- Documentation: [文档](https://marketwatchdata.readthedocs.io/)
+- documentation: [文档](https://marketwatchdata.readthedocs.io/)
 
 
-## Installation
+## installation
 
-### General
+### general
 
 ```shell
 pip install marketwatchdata --upgrade
 ```
 
-### China
+### china
 
 ```shell
 pip install marketwatchdata -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com  --upgrade
 ```
-#### Test
+#### test
 
 ```python
 import marketwatchdata as mw
@@ -37,20 +36,20 @@ import marketwatchdata as mw
 print(mw.__version__)
 ```
 
-## Usage
+## usage
 
-### Data
+### data
 
-Code
+code
 
 ```python
 import marketwatchdata as mw
 
-df = mw.ohlc('STOCK/US/XNAS/AAPL', 'P1D', 'P1Y')
+df = mw.ohlc('stock/us/xnas/aapl', 'p1d', 'p1y')
 print(df)
 ```
 
-Output
+output
 
 ```
                 open     high      low   close       volume
@@ -70,22 +69,22 @@ date
 [250 rows x 5 columns]
 ```
 
-### Plot
+### plot
 
-Code
+code
 
 ```python
 import marketwatchdata as mw
-import mplfinance as mpf  # Please install mplfinance as follows: pip install mplfinance
+import mplfinance as mpf  # please install mplfinance as follows: pip install mplfinance
 
-df = mw.ohlc('STOCK/US/XNAS/AAPL', 'P1D', 'P1Y')
-mpf.plot(df, type='candle', mav=(3, 6, 9), volume=True, show_nontrading=False)
+df = mw.ohlc('stock/us/xnas/aapl', 'p1d', 'p1y')
+mpf.plot(df, type='candle', mav=(3, 6, 9), volume=true, show_nontrading=false)
 ```
 
-Output
+output
 
 ![](https://user-images.githubusercontent.com/668255/255549764-1665d2e5-f50d-462d-a4a6-ed04e7f7517a.png)
 
-## Acknowledgement
+## acknowledgement
 
-Thanks for the data provided by [marketwatch](http://www.marketwatch.com/);
+thanks for the data provided by [marketwatch](http://www.marketwatch.com/);
