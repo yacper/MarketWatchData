@@ -73,8 +73,8 @@ def ohlc(code: str, timeframe: str, timerange: str) -> pd.DataFrame:
     temp_df.columns = ["open", "high", "low", "close", 'volume', 'date']
 
     temp_df["date"] = pd.to_datetime(temp_df["date"], unit='ms').dt.date
-    # temp_df["time"] = pd.to_datetime(temp_df["time"],unit='ms')
-    temp_df.set_index("date", inplace=True)
+    # temp_df["date"] = pd.to_datetime(temp_df["date"], unit='ms')
+    temp_df.set_index(["date"], inplace=True)
     # print(temp_df.dtypes)
     temp_df.dropna(inplace=True)
 
@@ -84,4 +84,5 @@ def ohlc(code: str, timeframe: str, timerange: str) -> pd.DataFrame:
 
 if __name__ == "__main__":
     df = ohlc('TMUBMUSD03M', 'P1D', 'P1Y')
+    print(df.dtypes)
     print(df)
